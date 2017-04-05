@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="mycss.css">
+<style type="text/css">
+body{
+/*js和css直接写在html里面了*/
+padding:0;
+margin:0;
+background-color:#f4f4f4;
+font-family: Arial,Helvetica,Sans-serif;
+font-size:15px;
+line-height:1.5;
+}
+.container{
+width:98%;
+margin:auto;
+overflow:hidden;
+}
+.button_1{
+height:32px;
+background:#e8491d;
+border:0;
+padding-left:10px;
+padding-right:10px;
+color:#ffffff;
+}
+header{
+background:#35424a;
+color:#ffffff;
+padding-top:30px;
+min-height：70px;
+border-bottom:#875285 3px solid;
+}
+header a {
+color:#ffffff;
+text-decoration:none;
+text-transform:uppercase;
+font-size:16px;
+}
+header ul{
+margin:0;
+padding:0;
+}
+header li{
+display:inline;
+float:left;
+padding:0 20px 0 20px ;
+}
+header #branding {
+float:left;
+}
+header #branding h1{
+margin:0;
+}
+header nav{
+float:right;
+margin-top:10px;
+}
+
+header .hightlight,header .current a {
+color:#e8491d;
+font-weight:bold;
+}
+header a:hover{
+color:#cccccc;
+font-weight:bold;
+}
+#showcase{
+min-height:400px;
+background:#e8491d;/*or url(placeholder.jpg) no-repeat fixed top";*/
+text-align:center;
+color:#ffffff;
+}
+#showcase h1{
+margin-top:100px;
+font-size:55px;
+margin-bottom:10px;
+}
+#showcase p {
+font-size:20px;
+}
+#newsletter{
+padding:5px;
+color:#ffffff;
+background:#35424a;
+}
+
+#newsletter form {
+float:right;
+margin-top:30px;
+}
+#newsletter h1{
+float:left;
+}
+#newsletter input[type="email"]{
+padding:4px;
+height:20px;
+width:270px;
+}
+#boxes{
+margin-top:20px;
+}
+#boxes .box{
+float:left;
+width:33%;
+}
+.imgsrc{
+width:60px;
+height:20px;
+background:#35424a;
+}
+
+footer {
+padding:20px;
+margin-top:20px;
+color:#ffffff;
+background-color:#35424a;
+text-align:center;
+}
+#allpicture{
+margin-top:50px;
+}
+.pictures:nth-child(odd){
+float:left;
+width:30px;
+height:20px;
+background-color:#35424a;
+}
+.pictures:nth-child(even){
+float:left;
+width:30px;
+height:20px;
+background-color:#e8491d;
+}
+#allpicture:after{
+content:"."
+display:block;
+height:0px;
+visibility:hidden;
+clear:left;
+}
+</style>
+<title>my webside</title>
+</head>
+<body>
+<header>
+<div class="container">
+<div id="branding">
+<h1> <span class="hightlight">Heathers</span> Webside </h1>
+</div>
+<nav>
+<ul>
+<li class="current"><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section id="showcase">
+<div class="container">
+<h1>Professional web design</h1>
+<p>i have no idea what to put here, but here it is,rse sfui dssfdwe iol wro ddui slsuiui  dlu ijiul sdfuihoi </p>
+</div>
+</section>
+<section id="newsletter">
+<div class="container">
+<h1>Subcribe to our newsletter</h1>
+<form>
+<input type="email" placeholder="Enter your email..."/>
+<input type="submit" class="button_1">
+</form>
+</div>
+</section>
+<section id="boxes">
+<div class="container">
+<div class="box">
+<div class="imgsrc">
+</div>
+<h3>CSS3 Styling</h3>
+<p>lef dfd dsf dds d dswe e2j,ew rj  df sd lsaj fd fsd </p>
+</div>
+<div class="box">
+<div class="imgsrc">
+</div>
+<h3>HTML5 Markup</h3>
+<p>lef dfd dsfsdds dsfd w re2j,ewrrj  dfjsd lsaj f sd </p>
+</div>
+<div class="box">
+<div class="imgsrc">
+</div>
+<h3>Graphic Design</h3>
+<p>lef dfd dsfs ds ds sw 2j,ewrrj  dfj d lsaj fd sd </p>
+</div>
+</section>
+<section>
+<div class="container">
+<div id="slider">
+</div>
+<p>Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript it forms a triad of cornerstone technologies for the World Wide Web.[1] Web browsers receive HTML documents from a webserver or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+</p>
+
+<div id="allpicture">
+<div class="pictures"></div><div class="pictures"></div>
+</div>
+</div>
+
+</section>
+<footer class="myfooter">
+<p>heather web design ,copyright &copy; 2017</p>
+</footer>
+<script>
+function theSlider(){
+if (!document.getElementById) return false;
+if (!document.createElement) return false;
+if (!document.getElementsByClassName) return false;
+var slider = document.getElementById("slider")
+var shouldbeimg = document.createElement("div")
+shouldbeimg.setAttribute("class","shouldbeimg")
+slider.appendChild(shouldbeimg);
+shouldbeimg.style.width="60px";
+shouldbeimg.style.height="20px";
+shouldbeimg.style.marginTop="20px";
+shouldbeimg.style.background="#e8491d";
+
+var notes = document.createElement("p")
+notes.innerHTML="thank you for visiting"
+var myfooter = document.getElementsByClassName("myfooter")[0]
+var bodys = document.getElementsByTagName("body")[0];
+notes.style.textAlign="center";
+notes.style.fontSize="20px";
+bodys.insertBefore(notes,myfooter);
+}
+
+
+
+
+function changeitems (){
+var imgsrc =document.getElementsByClassName("imgsrc");
+for (i=0;i<imgsrc.length;i++){
+imgsrc[i].addEventListener("click", function(){
+var itemclass= this.getAttribute("class");/*应该是href图片*/
+var theitem = document.getElementById("allpicture").getElementsByClassName("pictures");
+for (k=0;k<theitem.length;k++)
+theitem[k].setAttribute("class",itemclass);
+})
+}
+}
+
+window.onload=function() {theSlider();changeitems();}
+
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+</script>
+</body>
+</html>
